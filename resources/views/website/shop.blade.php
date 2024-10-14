@@ -38,173 +38,20 @@
             </div>
           </div>
           <div class="row mb-5">
-
-            <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-              <div class="block-4 text-center border">
-                <figure class="block-4-image">
-                  <a href="{{url('shop-single')}}"><img src="{{asset('assets/images/cloth_1.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
-                </figure>
-                <div class="block-4-text p-4">
-                  <h3><a href="{{url('shop-single')}}">{{ __('shop.tank_top') }}</a></h3>
-                  <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.t_shirt')]) }}</p>
-                  <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
+            @foreach ($products as $product)
+                <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="block-4 text-center border">
+                        <figure class="block-4-image">
+                            <a href="{{url("shops/$product->id")}}"><img src="{{asset('assets/images/cloth_1.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
+                        </figure>
+                        <div class="block-4-text p-4">
+                            <h3><a href="{{url('shop-single')}}">{{ __('shop.tank_top') }}</a></h3>
+                            <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.t_shirt')]) }}</p>
+                            <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-              <div class="block-4 text-center border">
-                <figure class="block-4-image">
-                  <a href="{{url('shop-single')}}"><img src="{{asset('assets/images/shoe_1.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
-                </figure>
-                <div class="block-4-text p-4">
-                  <h3><a href="{{url('shop-single')}}">{{ __('shop.corater') }}</a></h3>
-                  <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.products')]) }}</p>
-                  <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-              <div class="block-4 text-center border">
-                <figure class="block-4-image">
-                  <a href="{{url('shop-single')}}"><img src="{{asset('assets/images/cloth_2.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
-                </figure>
-                <div class="block-4-text p-4">
-                  <h3><a href="{{url('shop-single')}}">{{ __('shop.polo_shirt') }}</a></h3>
-                  <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.products')]) }}</p>
-                  <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-              <div class="block-4 text-center border">
-                <figure class="block-4-image">
-                  <a href="{{url('shop-single')}}"><img src="{{asset('assets/images/cloth_3.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
-                </figure>
-                <div class="block-4-text p-4">
-                  <h3><a href="{{url('shop-single')}}">{{ __('shop.t_shirt_mockup') }}</a></h3>
-                  <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.products')]) }}</p>
-                  <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-              <div class="block-4 text-center border">
-                <figure class="block-4-image">
-                  <a href="{{url('shop-single')}}"><img src="{{asset('assets/images/shoe_1.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
-                </figure>
-                <div class="block-4-text p-4">
-                  <h3><a href="{{url('shop-single')}}">{{ __('shop.corater') }}</a></h3>
-                  <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.products')]) }}</p>
-                  <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-              <div class="block-4 text-center border">
-                <figure class="block-4-image">
-                  <a href="{{url('shop-single')}}"><img src="{{asset('assets/images/cloth_1.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
-                </figure>
-                <div class="block-4-text p-4">
-                  <h3><a href="{{url('shop-single')}}">{{ __('shop.tank_top') }}</a></h3>
-                  <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.t_shirt')]) }}</p>
-                  <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-              <div class="block-4 text-center border">
-                <figure class="block-4-image">
-                  <a href="{{url('shop-single')}}"><img src="{{asset('assets/images/shoe_1.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
-                </figure>
-                <div class="block-4-text p-4">
-                  <h3><a href="{{url('shop-single')}}">{{ __('shop.corater') }}</a></h3>
-                  <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.products')]) }}</p>
-                  <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-              <div class="block-4 text-center border">
-                <figure class="block-4-image">
-                  <a href="{{url('shop-single')}}"><img src="{{asset('assets/images/cloth_2.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
-                </figure>
-                <div class="block-4-text p-4">
-                  <h3><a href="{{url('shop-single')}}">{{ __('shop.polo_shirt') }}</a></h3>
-                  <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.products')]) }}</p>
-                  <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-              <div class="block-4 text-center border">
-                <figure class="block-4-image">
-                  <a href="{{url('shop-single')}}"><img src="{{asset('assets/images/cloth_3.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
-                </figure>
-                <div class="block-4-text p-4">
-                  <h3><a href="{{url('shop-single')}}">{{ __('shop.t_shirt_mockup') }}</a></h3>
-                  <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.products')]) }}</p>
-                  <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-              <div class="block-4 text-center border">
-                <figure class="block-4-image">
-                  <a href="{{url('shop-single')}}"><img src="{{asset('assets/images/shoe_1.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
-                </figure>
-                <div class="block-4-text p-4">
-                  <h3><a href="{{url('shop-single')}}">{{ __('shop.corater') }}</a></h3>
-                  <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.products')]) }}</p>
-                  <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-              <div class="block-4 text-center border">
-                <figure class="block-4-image">
-                  <a href="{{url('shop-single')}}"><img src="{{asset('assets/images/cloth_1.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
-                </figure>
-                <div class="block-4-text p-4">
-                  <h3><a href="{{url('shop-single')}}">{{ __('shop.tank_top') }}</a></h3>
-                  <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.t_shirt')]) }}</p>
-                  <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-              <div class="block-4 text-center border">
-                <figure class="block-4-image">
-                  <a href="{{url('shop-single')}}"><img src="{{asset('assets/images/cloth_2.jpg')}}" alt="{{ __('shop.image_placeholder') }}" class="img-fluid"></a>
-                </figure>
-                <div class="block-4-text p-4">
-                  <h3><a href="{{url('shop-single')}}">{{ __('shop.polo_shirt') }}</a></h3>
-                  <p class="mb-0">{{ __('shop.finding_perfect', ['item' => __('shop.products')]) }}</p>
-                  <p class="text-primary font-weight-bold">{{ __('shop.price_format', ['price' => 50]) }}</p>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-          <div class="row" data-aos="fade-up">
-            <div class="col-md-12 text-center">
-              <div class="site-block-27">
-                <ul>
-                  <li><a href="#">&lt;</a></li>
-                  <li class="active"><span>1</span></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li><a href="#">&gt;</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+            @endforeach
 
         <div class="col-md-3 order-1 mb-5 mb-md-0">
           <div class="border p-4 rounded mb-4">

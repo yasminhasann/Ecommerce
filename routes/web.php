@@ -41,11 +41,13 @@ Route::middleware('lang')->group(function () {
         Route::view('/thankyou', 'website.thankyou');
         Route::view('/contact', 'website.contact');
         // wishlist Route
-        Route::middleware('auth')->group(function () {
-            Route::get('/wishlist', [WishlistController::class, 'showWishlist'])->name('wishlist.index');
-            Route::post('/wishlist/add/{product}', [WishlistController::class, 'addToWishlist'])->name('wishlist.add');
-            Route::delete('/wishlist/remove/{product}', [WishlistController::class, 'removeFromWishlist'])->name('wishlist.remove');
-        });
+        // Route::middleware('auth')->group(function () {
+        //     Route::get('/wishlist', [WishlistController::class, 'showWishlist'])->name('wishlist.index');
+        //     Route::post('/wishlist/add/{product}', [WishlistController::class, 'addToWishlist'])->name('wishlist.add');
+        //     Route::delete('/wishlist/remove/{product}', [WishlistController::class, 'removeFromWishlist'])->name('wishlist.remove');
+        // });
+
+        Route::resource('shops',ShopController::class);
         //Contact-Mail route
         Route::post('/contact', [ContactController::class, 'contactFormSubmit'])->name('contact.submit');
 
